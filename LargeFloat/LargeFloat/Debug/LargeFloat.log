@@ -1,0 +1,4 @@
+﻿  Main.cpp
+d:\develop\algorightms2019\largefloat\largefloat\main.cpp(80): warning C4309: '=': truncation of constant value
+  LargeFloat.vcxproj -> D:\Develop\AlGOrightms2019\LargeFloat\Debug\LargeFloat.exe
+  LargeFloat.vcxproj -> D:\Develop\AlGOrightms2019\LargeFloat\Debug\LargeFloat.pdb (Partial PDB)
