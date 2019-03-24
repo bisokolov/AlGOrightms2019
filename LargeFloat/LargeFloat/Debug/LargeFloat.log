@@ -1,4 +1,5 @@
 ﻿  Main.cpp
-d:\develop\algorightms2019\largefloat\largefloat\main.cpp(80): warning C4309: '=': truncation of constant value
+d:\develop\algorightms2019\largefloat\largefloat\main.cpp(10): warning C4996: 'itoa': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _itoa. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdlib.h(1334): note: see declaration of 'itoa'
   LargeFloat.vcxproj -> D:\Develop\AlGOrightms2019\LargeFloat\Debug\LargeFloat.exe
   LargeFloat.vcxproj -> D:\Develop\AlGOrightms2019\LargeFloat\Debug\LargeFloat.pdb (Partial PDB)

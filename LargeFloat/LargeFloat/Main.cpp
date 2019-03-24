@@ -4,10 +4,17 @@
 #include <cmath>
 //Борис Соколов
 
+void printbinchar(char character)
+{
+	char output[9];
+	itoa(character, output, 2);
+	printf("%s  ", output);
+}
+
 union doubleBitRepresentation
 {
 	double doubleValue;
-	char bitRepresentation[sizeof(double)];
+	unsigned char bitRepresentation[sizeof(double)];
 };
 
 
@@ -23,26 +30,69 @@ public:
 //private:
 	char sign : 1;
 	char exponent : 7;
-	char  significant [5];
+	char unsigned significant [5];
 };
 
 
 LargeFloat::LargeFloat(double value = 0.0) {
-	if(value >=0) {
+	// sign
+	if (value >= 0) {
 		this->sign = 0;
 	}
 	else { this->sign = 1; }
-	double valueSignificant;
+	//exponent
 	int valueExponent;
+	double valueSignificant;
 	valueSignificant = frexp(value, &valueExponent);
 	--valueExponent;
-	valueSignificant = valueSignificant * 2;
 	this->exponent = valueExponent;
-	valueSignificant = valueSignificant - 1;
+
+	
+
 	// the number is represented in a way to be copied bitwise
+	valueSignificant = valueSignificant  * 2;
+	valueSignificant = valueSignificant - 1;
+	for (int i = 0;i < 5;++i)
+	{
+		this->significant[i] = 0;
+	}
+	
+
+
 	doubleBitRepresentation bitValueSignificant;
 	bitValueSignificant.doubleValue = valueSignificant;
+	
+	for (int i = 0;i < 40;++i) {
+		int doubleArrayPosition = (i + 12) / 8; // first 12 bits are for sign + exp
+		int doubleBitPosition = (i + 12) % 8;
+		unsigned char doubleBitMask = (1u << doubleBitPosition);
+		bool positionInDoubleIsSet = (bitValueSignificant.bitRepresentation[doubleArrayPosition] & doubleBitMask) != 0;
 
+
+
+		
+		
+		if(positionInDoubleIsSet) {
+			int LargeFloatArrayPosition = i / 8;
+			int LargeFloatBitPosition = i / 8;
+			unsigned char bitMask = (1u << LargeFloatBitPosition);
+			this->significant[LargeFloatArrayPosition] = this->significant[LargeFloatArrayPosition] | bitMask;
+		}
+	}
+
+	std::cout << "LF constructor()" << std::endl;
+	std::cout << "double partitioned is " << std::endl;
+	for (int i = 0;i < 8;++i) {
+		printbinchar(bitValueSignificant.bitRepresentation[i]);
+	}
+	std::cout << "End of double " << std::endl;
+	std::cout << " large float partitioned is " << std::endl;
+	for (int i = 0;i < 5;++i)
+	{
+		printbinchar(this->significant[i]);
+	}
+	std::cout << "End of double constructor";
+	
 
 }
 
@@ -89,6 +139,7 @@ LargeFloat operator+(const LargeFloat& a, const LargeFloat& b)
 
 int main() {
 	
+	/* testing if operator << works
 	LargeFloat m_value;
 	m_value.sign = 0;
 	m_value.exponent = 0;
@@ -100,7 +151,14 @@ int main() {
 	std::cout << "Size of LargeFloat is : " << sizeof(m_value) << "\n";
 
 	std::cout << m_value << std::endl;
-	
+
+	*/
+	double testValue = 1.1231231235561232;
+	LargeFloat d_value(testValue);
+	std::cout << "Test Value is : " << testValue << "  , and the Largefloat value is : " << d_value << std::endl;
+
+
+	/*  testing how frexp works
 	double test = 13.231;
 	double signif;
 	int exp;
@@ -108,6 +166,7 @@ int main() {
 
 	std::cout << "The test number is : " << test << "  the exponent is : " << exp << " the significant is : " << signif << std::endl;
 	std::cout << " The signif * 2 ^ exp is : " << signif*pow(2, exp) << std::endl;
+	*/
 
 	return 0;
 }
