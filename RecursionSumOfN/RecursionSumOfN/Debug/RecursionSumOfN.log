@@ -1,0 +1,6 @@
+﻿  Main.cpp
+f:\develop\algorightms2019\recursionsumofn\recursionsumofn\main.cpp(12): warning C4018: '<': signed/unsigned mismatch
+f:\develop\algorightms2019\recursionsumofn\recursionsumofn\main.cpp(21): warning C4018: '<': signed/unsigned mismatch
+f:\develop\algorightms2019\recursionsumofn\recursionsumofn\main.cpp(43): warning C4018: '<': signed/unsigned mismatch
+f:\develop\algorightms2019\recursionsumofn\recursionsumofn\main.cpp(76): warning C4018: '<': signed/unsigned mismatch
+  RecursionSumOfN.vcxproj -> F:\develop\AlGOrightms2019\RecursionSumOfN\Debug\RecursionSumOfN.exe

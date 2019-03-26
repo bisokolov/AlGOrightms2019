@@ -1,0 +1,4 @@
+﻿  main.cpp
+f:\develop\algorightms2019\flappybird\flappybird\flappy.h(11): warning C4305: 'initializing': truncation from 'double' to 'float'
+f:\develop\algorightms2019\flappybird\flappybird\flappy.h(12): warning C4305: 'initializing': truncation from 'double' to 'float'
+  FlappyBird.vcxproj -> F:\develop\AlGOrightms2019\FlappyBird\Debug\FlappyBird.exe

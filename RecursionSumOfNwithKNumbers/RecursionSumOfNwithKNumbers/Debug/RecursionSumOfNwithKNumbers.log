@@ -1,0 +1,7 @@
+﻿  Main.cpp
+f:\develop\algorightms2019\recursionsumofnwithknumbers\recursionsumofnwithknumbers\main.cpp(12): warning C4018: '<': signed/unsigned mismatch
+f:\develop\algorightms2019\recursionsumofnwithknumbers\recursionsumofnwithknumbers\main.cpp(21): warning C4018: '<': signed/unsigned mismatch
+f:\develop\algorightms2019\recursionsumofnwithknumbers\recursionsumofnwithknumbers\main.cpp(29): warning C4018: '<': signed/unsigned mismatch
+f:\develop\algorightms2019\recursionsumofnwithknumbers\recursionsumofnwithknumbers\main.cpp(53): warning C4018: '<': signed/unsigned mismatch
+f:\develop\algorightms2019\recursionsumofnwithknumbers\recursionsumofnwithknumbers\main.cpp(86): warning C4018: '<': signed/unsigned mismatch
+  RecursionSumOfNwithKNumbers.vcxproj -> F:\develop\AlGOrightms2019\RecursionSumOfNwithKNumbers\Debug\RecursionSumOfNwithKNumbers.exe

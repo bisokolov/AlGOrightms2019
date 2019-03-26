@@ -1,5 +1,12 @@
-﻿  Main.cpp
-d:\develop\algorightms2019\largefloat\largefloat\main.cpp(10): warning C4996: 'itoa': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _itoa. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdlib.h(1334): note: see declaration of 'itoa'
-  LargeFloat.vcxproj -> D:\Develop\AlGOrightms2019\LargeFloat\Debug\LargeFloat.exe
-  LargeFloat.vcxproj -> D:\Develop\AlGOrightms2019\LargeFloat\Debug\LargeFloat.pdb (Partial PDB)
+﻿  pch.cpp
+  LargeFloat.cpp
+f:\develop\algorightms2019\largefloat\largefloat\largefloatimplementation.h(16): error C2039: 'ostream': is not a member of 'std'
+  f:\develop\algorightms2019\largefloat\largefloat\predefined c++ types (compiler internal)(256): note: see declaration of 'std'
+f:\develop\algorightms2019\largefloat\largefloat\largefloatimplementation.h(16): error C2143: syntax error: missing ';' before '&'
+f:\develop\algorightms2019\largefloat\largefloat\largefloatimplementation.h(16): error C2433: 'ostream': 'friend' not permitted on data declarations
+f:\develop\algorightms2019\largefloat\largefloat\largefloatimplementation.h(16): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+f:\develop\algorightms2019\largefloat\largefloat\largefloatimplementation.h(16): error C2238: unexpected token(s) preceding ';'
+f:\develop\algorightms2019\largefloat\largefloat\largefloatimplementation.h(17): fatal error C1903: unable to recover from previous error(s); stopping compilation
+  INTERNAL COMPILER ERROR in 'C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\CL.exe'
+      Please choose the Technical Support command on the Visual C++
+      Help menu, or open the Technical Support help file for more information
