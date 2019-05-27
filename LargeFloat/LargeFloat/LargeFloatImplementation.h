@@ -1,6 +1,6 @@
 #pragma once
 #include<iostream>
-
+// In process of Reworking
 union doubleBitRepresentation
 {
 	double doubleValue;
@@ -17,7 +17,7 @@ public:
 	friend LargeFloat operator+(const LargeFloat&, const LargeFloat&);
 
 
-	//private:
+	private:
 	char sign : 1;
 	char exponent : 7;
 	char significant[5];

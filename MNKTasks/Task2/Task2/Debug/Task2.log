@@ -1,5 +1,0 @@
-﻿  Task2.cpp
-f:\develop\mnktasks\task2\task2\task2.cpp(22): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-f:\develop\mnktasks\task2\task2\task2.cpp(23): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-f:\develop\mnktasks\task2\task2\task2.cpp(24): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-  Task2.vcxproj -> F:\develop\MNKTasks\Task2\Debug\Task2.exe
